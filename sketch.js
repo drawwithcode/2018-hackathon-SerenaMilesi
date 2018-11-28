@@ -28,21 +28,19 @@ function setup() {
   myCanvas.mouseClicked(function() {
     if (mySong.isPlaying() == false) {
       mySong.play();
-        myImage.filter("gray");
+      myImage.filter("gray");
     } else {
       mySong.pause();
     }
   });
 
-
 }
-
 
 function draw() {
   // put drawing code here
 
   image(myImage, 0, 0, windowWidth, windowHeight);
-//weird effect
+  //weird effect
   var posX = random(0, width);
   var posY = random(0, height);
 
@@ -61,7 +59,7 @@ function draw() {
   textStyle(BOLD);
   strokeWeight(3);
   stroke('#42E022');
-  textSize(60); //farlo in base alla size della windae
+  textSize(60);
   textAlign(CENTER);
   text(myText, windowWidth / 2, windowHeight / 2);
   pop();
@@ -92,7 +90,7 @@ function draw() {
   //mouse
   push();
   imageMode(CENTER);
-  image(cherry, mouseX, mouseY,50, 50);
+  image(cherry, mouseX, mouseY, 50, 50);
   pop();
 
 }
@@ -101,7 +99,7 @@ function draw() {
 function keyPressed() {
   mySong.playMode('restart');
   mySong.play();
-  image(logo1, width / 4, height / 2, 100,100);
+  image(logo1, width / 4, height / 2, 100, 100);
 
 }
 
